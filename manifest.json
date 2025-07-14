@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "CynaxEra Malicious Link Detector",
+  "description": "CynaxEra's browser extension scans and detects malicious, phishing, or suspicious links in real-time using hybrid threat intelligence and custom heuristics. Stay safe while browsing!",
+  "version": "1.0.0",
+  "icons": {
+    "16": "assets/icons/Icons-16.png",
+    "24": "assets/icons/Icon-24.png",
+    "32": "assets/icons/Icon-32.png",
+    "48": "assets/icons/Icon-48.png",
+    "128": "assets/icons/Icon-128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup/dist/index.html",
+    "default_icon": {
+      "16": "assets/icons/Icons-16.png",
+      "24": "assets/icons/Icon-24.png",
+      "32": "assets/icons/Icon-32.png",
+      "48": "assets/icons/Icon-48.png",
+      "128": "assets/icons/Icon-128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup/dist/history.html", "popup/dist/assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "author": "CynaxEra"
+}
