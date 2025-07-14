@@ -1,4 +1,4 @@
-# 🛡️ CynaxEra Malicious Link Detector
+# ![CynaxEra Logo](assets/icons/Icon-32.png) CynaxEra Malicious Link Detector
 
 A powerful Chrome extension that scans and detects malicious, phishing, or suspicious links in real-time using hybrid threat intelligence and custom heuristics. Stay safe while browsing with comprehensive security analysis from multiple sources.
 
